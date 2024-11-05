@@ -12,7 +12,9 @@ const GlobeComponent = () => {
     "Indonesia",
     "Spain",
     "Portugal",
-    "Marocco",
+    "Morocco",
+    "Tunisia",
+    "USA",
   ];
 
   onMount(() => {
@@ -58,7 +60,7 @@ const GlobeComponent = () => {
       .append("path")
       .attr("d", (d: any) => pathGenerator(d as any))
       .attr("fill", (d: { properties: { name: string } }) =>
-        visitedCountries.includes(d.properties.name) ? "#E63946" : "white"
+        visitedCountries.includes(d.properties.name) ? "#05402A" : "white"
       )
       .style("stroke", "black")
       .style("stroke-width", 0.3)
