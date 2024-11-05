@@ -12,7 +12,7 @@ import { getCurrentTime, formatTime } from "../lib/helpers";
   function updateClock() {
     const timeDisplay = document.getElementById("timeDisplay");
     if (timeDisplay) {
-      const time = getCurrentTime("Europe/Brussels");
+      const time = getCurrentTime("Asia/Makassar");
       timeDisplay.textContent = formatTime(time);
       timeDisplay.setAttribute("datetime", time.date.toISOString());
     }
@@ -33,6 +33,6 @@ import { getCurrentTime, formatTime } from "../lib/helpers";
     id="timeDisplay"
     class="text-3xl xl:text-4xl whitespace-nowrap md:whitespace-normal lg:whitespace-nowrap w-50 xl:w-auto h-[calc(100%-28px)] font-serif flex justify-left items-center"
   >
-    {formatTime(getCurrentTime("Europe/Brussels"))}
+    {formatTime(getCurrentTime("Asia/Makassar"))}
   </time>
 </Card>
