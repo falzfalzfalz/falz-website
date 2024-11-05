@@ -32,6 +32,7 @@ function Tooltip(props: Props) {
     "Stop, please!",
     "Okay, last one!",
     "That's it, I'm done!",
+    "🫥"
   ];
 
   const currentMessage = () => {
