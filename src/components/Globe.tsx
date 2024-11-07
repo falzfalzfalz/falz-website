@@ -15,6 +15,9 @@ const GlobeComponent = () => {
     "Morocco",
     "Tunisia",
     "USA",
+    "Thailand",
+    "Singapore",
+    "Turkey",
   ];
 
   onMount(() => {
