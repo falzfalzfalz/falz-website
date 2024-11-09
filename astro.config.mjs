@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import netlify from "@astrojs/netlify";
 import robotsTxt from "astro-robots-txt";
 import UnoCSS from "@unocss/astro";
 import icon from "astro-icon";
@@ -10,9 +9,12 @@ import { remarkReadingTime } from "./src/lib/ remark-reading-time.mjs";
 
 import svelte from "@astrojs/svelte";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://falz.studio/",
+
   integrations: [
     sitemap(),
     robotsTxt({
@@ -26,12 +28,16 @@ export default defineConfig({
     icon(),
     svelte(),
   ],
+
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+
   output: "server",
-  adapter: netlify({ edgeMiddleware: true }),
+
   vite: {
     assetsInclude: "**/*.riv",
   },
+
+  adapter: cloudflare(),
 });
